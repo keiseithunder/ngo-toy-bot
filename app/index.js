@@ -13,7 +13,7 @@ client.on('message',async message => {
         if (message.content.match(/(pornhub)?(youjizz)?/g)) {
             let toyRole = message.guild.roles.cache.find(r => r.name === 'ไอหน้าโง่ทอยโดน')
             let toy = message.member
-            await message.delete(2000)
+            await message.delete({timeout:3000})
             toy.roles.add(toyRole)
             setTimeout(function () {
                 toy.roles.remove(toyRole)
