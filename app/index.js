@@ -8,20 +8,21 @@ if (process.env.LOGIN_TOKEN) {
 
 client.login(LOGIN_TOKEN)
 
-client.on('message',async message => {
+client.on('message', async message => {
     if (message.author.username.toLowerCase().includes('toy')) {
-        if (message.content.match(/(pornhub)?(youjizz)?/g)) {
-            console.log(message.author.name , message.content)
+        const toyMsg = message.content
+        if (toyMsg.includes('pornhub') || toyMsg.includes('youjizz')) {
+            console.log(message.author.username, toyMsg)
             let toyRole = message.guild.roles.cache.find(r => r.name === 'ไอหน้าโง่ทอยโดน')
             let toy = message.member
             try {
-                await message.delete({timeout:3000})
+                await message.delete({ timeout: 3000 })
             } catch (error) {
                 console.log('no msg found')
             }
             toy.roles.add(toyRole)
             setTimeout(function () {
-                toy.roles.remove(toyRole).catch(()=> console.log('No role found'))
+                toy.roles.remove(toyRole).catch(() => console.log('No role found'))
             }, 300000)
         }
     }
