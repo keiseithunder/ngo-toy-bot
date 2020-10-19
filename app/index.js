@@ -11,6 +11,7 @@ client.login(LOGIN_TOKEN)
 client.on('message',async message => {
     if (message.author.username.toLowerCase().includes('toy')) {
         if (message.content.match(/(pornhub)?(youjizz)?/g)) {
+            console.log(message.author.name , message.content)
             let toyRole = message.guild.roles.cache.find(r => r.name === 'ไอหน้าโง่ทอยโดน')
             let toy = message.member
             try {
