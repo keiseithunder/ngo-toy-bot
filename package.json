@@ -1,0 +1,12 @@
+{
+  "name": "discord-bot",
+  "version": "1.0.0",
+  "main": "app/index.js",
+  "author": "Wicharn Rueangkhajorn <wicharn.keisei@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^12.3.1",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.11.0"
+  }
+}
