@@ -11,7 +11,7 @@ client.login(LOGIN_TOKEN)
 client.on('message', async message => {
     if (message.author.username.toLowerCase().includes('toy')) {
         const toyMsg = message.content
-        if (toyMsg.includes('pornhub') || toyMsg.includes('youjizz')|| toyMsg.includes('พลัม')) {
+        if (toyMsg.includes('pornhub') || toyMsg.includes('youjizz')|| toyMsg.includes('พลัม') ||toyMsg.includes('มี่') ) {
             console.log(message.author.username, toyMsg)
             let toyRole = message.guild.roles.cache.find(r => r.name === 'ไอหน้าโง่ทอยโดน')
 			let toy = message.member
